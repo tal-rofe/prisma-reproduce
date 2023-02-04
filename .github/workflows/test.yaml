@@ -1,0 +1,31 @@
+name: blalala
+
+on:
+    pull_request:
+        branches: [main]
+
+permissions:
+    contents: read
+
+jobs:
+    blabla:
+        name: Testing
+
+        runs-on: [self-hosted, Linux, X64, integration]
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.13.0
+              
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 7.26.3
+
+            - name: Installing dependencies
+              run: pnpm i --frozen-lockfile --prefer-offline
+              shell: bash

@@ -1,0 +1,16 @@
+{
+	"name": "end",
+	"version": "1.0.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"scripts": {
+		"postinstall": "pnpm prisma-gen",
+		"prisma-gen": "prisma generate --schema ../../prisma/schema.prisma"
+	},
+	"dependencies": {
+		"@prisma/client": "4.9.0"
+	},
+	"devDependencies": {
+		"prisma": "4.9.0"
+	}
+}

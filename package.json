@@ -1,0 +1,11 @@
+{
+	"name": "xxx",
+	"version": "1.0.0",
+	"private": true,
+	"description": "...",
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@prisma/client": "4.9.0",
+		"prisma": "4.9.0"
+	}
+}
