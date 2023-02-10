@@ -13,19 +13,9 @@ jobs:
 
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
+            - name: Setup Node environment
+              uses: Exlint/node-environment@v1.2.6
               with:
-                  node-version: 18.13.0
-              
-            - name: Install pnpm
-              uses: pnpm/action-setup@v2
-              with:
-                  version: 7.26.3
-
-            - name: Installing dependencies
-              run: pnpm i --frozen-lockfile --prefer-offline
-              shell: bash
+                  node-version: 18.14.0
+                  package-manager: pnpm
+                  package-manager-version: 7.26.3
